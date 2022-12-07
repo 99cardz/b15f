@@ -2,7 +2,7 @@
 #define B15F_H
 
 #include <iostream>
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 #include <string>
 #include <fstream>
 #include <cstdlib>
@@ -23,8 +23,8 @@
 
 // wichtig für die Register-Zugriffe
 #define _AVR_IO_H_ 1 // Erzwinge die Inklusion
-#include "/usr/lib/avr/include/avr/sfr_defs.h"
-#include "/usr/lib/avr/include/avr/iom1284p.h"
+#include "avr-libc/include/avr/sfr_defs.h"
+#include "avr-libc/include/avr/iom1284p.h"
 
 typedef std::function<void(std::exception&)> errorhandler_t;
 
