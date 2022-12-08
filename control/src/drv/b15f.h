@@ -9,6 +9,8 @@
 #include <chrono>
 #include <cstdint>
 #include <vector>
+#include <array>
+#include <thread>
 
 #include <unistd.h>
 #include <fcntl.h>
