@@ -11,11 +11,13 @@
 #include <vector>
 #include <array>
 #include <thread>
+#include <functional>
 
 #include <unistd.h>
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <termios.h>
+
 
 #include "commit_hash.h"
 #include "requests.h"
@@ -25,8 +27,8 @@
 
 // wichtig für die Register-Zugriffe
 #define _AVR_IO_H_ 1 // Erzwinge die Inklusion
-#include "avr-libc/include/avr/sfr_defs.h"
-#include "avr-libc/include/avr/iom1284p.h"
+#include "sfr_defs.h"
+#include "iom1284p.h"
 
 typedef std::function<void(std::exception&)> errorhandler_t;
 
