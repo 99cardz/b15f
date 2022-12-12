@@ -657,16 +657,16 @@ void B15F::init()
     if (device.length() == 0)
         abort("Adapter nicht gefunden");
 
-    std::cout << PRE << "Verwende Adapter: " << device << std::endl;
+    // std::cout << PRE << "Verwende Adapter: " << device << std::endl;
 
 
-    std::cout << PRE << "Stelle Verbindung mit Adapter her... " << std::flush;
+    // std::cout << PRE << "Stelle Verbindung mit Adapter her... " << std::flush;
     usart.setBaudrate(BAUDRATE);
     usart.openDevice(device);
-    std::cout << "OK" << std::endl;
+    // std::cout << "OK" << std::endl;
 
 
-    std::cout << PRE << "Teste Verbindung... " << std::flush;
+    // std::cout << PRE << "Teste Verbindung... " << std::flush;
     int tries = 4;
     while (--tries)
     {
@@ -695,13 +695,13 @@ void B15F::init()
     if (!tries)
         abort("Verbindungstest fehlgeschlagen. Neueste Version im Einsatz?");
 
-    std::cout << "OK" << std::endl;
+    // std::cout << "OK" << std::endl;
 
 
     // Gib board info aus
     std::vector<std::string> info = getBoardInfo();
-    std::cout << PRE << "AVR Firmware Version: " << info[0] << " um " << info[1] << " Uhr (" << info[2] << ")"
-              << std::endl;
+    // std::cout << PRE << "AVR Firmware Version: " << info[0] << " um " << info[1] << " Uhr (" << info[2] << ")"
+            //   << std::endl;
 
     // Überprüfe Version
     std::string& avr_commit_hash = info[3];
@@ -712,4 +712,6 @@ void B15F::init()
         std::cout << std::string(PRE.length(), ' ') << "Control: " << COMMIT_HASH << std::endl << std::endl;
         abort("Versionen inkompatibel. Bitte Software aktualisieren!");
     }
+
+    std::cout << "B15 alles ok" << std::endl;
 }
