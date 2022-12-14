@@ -713,5 +713,5 @@ void B15F::init()
         abort("Versionen inkompatibel. Bitte Software aktualisieren!");
     }
 
-    std::cout << "B15 alles ok" << std::endl;
+    // std::cout << "B15 alles ok" << std::endl;
 }
