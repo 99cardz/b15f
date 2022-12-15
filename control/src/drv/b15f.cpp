@@ -481,7 +481,7 @@ void B15F::setMem8(volatile uint8_t* adr, uint8_t val)
 
     uint8_t aw;
     usart.receive(&aw, 0, sizeof(aw));
-    assertCode(aw, val);
+    // assertCode(aw, val);  sorry
 }
 
 uint8_t B15F::getMem8(volatile uint8_t* adr)
